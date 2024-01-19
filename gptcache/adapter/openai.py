@@ -28,7 +28,7 @@ import_openai()
 import openai
 
 
-class ChatCompletion(openai.ChatCompletion, BaseCacheLLM):
+class ChatCompletion(openai.resources.chat.Completions, BaseCacheLLM):
     """Openai ChatCompletion Wrapper
 
     Example:
