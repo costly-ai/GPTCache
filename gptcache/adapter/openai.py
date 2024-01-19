@@ -163,7 +163,7 @@ async def async_iter(input_list):
         yield item
 
 
-class Completion(openai.Completion, BaseCacheLLM):
+class Completion(openai.resources.Completions, BaseCacheLLM):
     """Openai Completion Wrapper
 
     Example:
@@ -238,7 +238,7 @@ class Completion(openai.Completion, BaseCacheLLM):
         )
 
 
-class Audio(openai.Audio):
+class Audio(openai.resources.Audio):
     """Openai Audio Wrapper
 
     Example:
@@ -319,7 +319,7 @@ class Audio(openai.Audio):
         )
 
 
-class Image(openai.Image):
+class Image(openai.resources.Images):
     """Openai Image Wrapper
 
     Example:
@@ -383,7 +383,7 @@ class Image(openai.Image):
         )
 
 
-class Moderation(openai.Moderation, BaseCacheLLM):
+class Moderation(openai.resources.Moderations, BaseCacheLLM):
     """Openai Moderation Wrapper
 
     Example:
